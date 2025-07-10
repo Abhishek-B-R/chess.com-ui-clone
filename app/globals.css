@@ -1,0 +1,109 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.sprite {
+  width: 60px; /* Width of a single logo */
+  height: 70px; /* Height of a single logo */
+  background-image: url('../assets/navsprite.png');
+  background-repeat: no-repeat;
+  display: inline-block;
+  transform: scale(0.50);
+}
+.sprite-premium { background-position: 10px -660px; }
+.sprite-play { background-position: 1 -660px;}
+
+/* CSS for 2nd column logos */
+.logo-play  { background-position: -50px -144px; }
+.logo-puzzles  { background-position: -50px -220px; }
+.logo-learn  { background-position: -50px -295px; }
+.logo-watch  { background-position: -50px -374px; }
+.logo-news { background-position: -50px -670px; }
+.logo-social  { background-position: -50px -448px; }
+.logo-more  { background-position: -50px -520px; }
+.logo-premium { background-position: -50px -595px; }
+.logo-icon { background-position: -50px -75px; }
+.logo-search { background-position: -0px -528px;
+  width: 50px;
+  height:45px }
+.logo-home { background-position: -0px -1100px;
+  width: 50px;
+  height:45px }
+.logo-events { background-position: -0px -880px;
+  width: 50px;
+  height:45px }
+.logo-logout { background-position: -0px -1365px;
+  width: 50px;
+  height:45px }
+.logo-members { background-position: -0px -1275px;
+  width: 50px;
+  height:45px }
+.logo-clubs { background-position: -0px -615px;
+  width: 50px;
+  height:45px }
+.logo-puzzlerush { background-position: -0px -2420px;
+  width: 50px;
+  height:45px }
+.logo-puzzlebattle { background-position: -0px -2595px;
+  width: 50px;
+  height:45px }
+.logo-leaderboard { background-position: -0px -1625px;
+  width: 50px;
+  height:45px }
+.logo-kids { background-position: -0px -1715px;
+  width: 50px;
+  height:45px }
+.logo-dailypuzzle { background-position: -0px -1540px;
+  width: 50px;
+  height:45px }
+.logo-openings { background-position: -0px -480px;
+  width: 50px;
+  height:45px }
+.logo-articles { background-position: -0px -395px;
+  width: 50px;
+  height:45px }
+.logo-topplayers { background-position: -0px -2330px;
+  width: 50px;
+  height:45px }
+.logo-history  { background-position: -0px -220px; 
+  width: 50px;
+  height:45px }
+
+@font-face {
+  font-family: 'chess'; /* Choose a unique name */
+  font-style: normal;
+  font-weight: 400;
+  src: url('../assets/chess-sans-700.5766ffe2.woff2') format('woff'); /* Path to your .woff file */
+}
+.font-chess {
+  font-family: 'chess', sans-serif; /* Use your font name */
+}
+
+@layer base {
+  .font-outline-2 {
+    -webkit-text-stroke: 10px #4B4847;
+  }
+}
